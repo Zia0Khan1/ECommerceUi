@@ -36,6 +36,7 @@ dependencies:
   expandable:
   flutter_svg:
   dot_navigation_bar:
+  flutter_switch:
 
 
 dev_dependencies:

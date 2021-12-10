@@ -37,9 +37,13 @@ class _DashBoardState extends State<DashBoard> {
     ];
     super.initState();
   }
+  double? height;
+  double? width;
 
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
       extendBody: true,
       body: IndexedStack(
@@ -49,15 +53,22 @@ class _DashBoardState extends State<DashBoard> {
       bottomNavigationBar: Padding(
         padding: EdgeInsets.only(bottom: 10),
         child: DotNavigationBar(
-          backgroundColor: HexColor("F3F3F3"),
+          // backgroundColor: HexColor("F3F3F3"),
           margin: EdgeInsets.only(left: 10, right: 10),
+          enableFloatingNavBar: false,
           currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           dotIndicatorColor: Colors.transparent,
-          itemPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 2),
-          unselectedItemColor: HexColor("CBCBCB"),
+          itemPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Colors.white,
+          // EdgeInsetsGeometry ?
+          // marginR = const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+          // EdgeInsetsGeometry ?
+          // paddingR = const EdgeInsets.only(bottom: 5, top: 10),
           // enableFloatingNavBar: false,
           onTap: _handleIndexChanged,
           items: [
+
             /// Home
             DotNavigationBarItem(
               icon: CircleAvatar(
@@ -69,9 +80,12 @@ class _DashBoardState extends State<DashBoard> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ImageIcon(
+
                         new AssetImage(
                           "assets/images/myHome.png",
+
                         ),
+
                         // color: Colors.white,
                       ),
                       SizedBox(
@@ -79,16 +93,16 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                       _selectedTab.index == 0
                           ? Container(
-                              height: 4,
-                              width: 4,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(
-                                    color: Colors.transparent,
-                                  ),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
-                            )
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                              color: Colors.transparent,
+                            ),
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(20))),
+                      )
                           : SizedBox(),
                     ],
                   )),
@@ -116,16 +130,16 @@ class _DashBoardState extends State<DashBoard> {
                       ),
                       _selectedTab.index == 1
                           ? Container(
-                              height: 4,
-                              width: 4,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  border: Border.all(
-                                    color: Colors.transparent,
-                                  ),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20))),
-                            )
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                              color: Colors.transparent,
+                            ),
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(20))),
+                      )
                           : SizedBox(),
                     ],
                   )),
@@ -205,42 +219,44 @@ class _DashBoardState extends State<DashBoard> {
                   )),
               selectedColor: Color(0xff73544C),
             ),
+
+
             ///Profile/person
-            // DotNavigationBarItem(
-            //   icon: CircleAvatar(
-            //       radius: 30.0,
-            //       backgroundColor: _selectedTab.index == 2
-            //           ? HexColor("263C32")
-            //           : Colors.transparent,
-            //       child: Column(
-            //         mainAxisAlignment: MainAxisAlignment.center,
-            //         children: [
-            //           ImageIcon(
-            //             new AssetImage(
-            //               "assets/images/myCart.png",
-            //             ),
-            //             // color: Colors.white,
-            //           ),
-            //           SizedBox(
-            //             height: 2,
-            //           ),
-            //           _selectedTab.index == 2
-            //               ? Container(
-            //             height: 4,
-            //             width: 4,
-            //             decoration: BoxDecoration(
-            //                 color: Colors.white,
-            //                 border: Border.all(
-            //                   color: Colors.transparent,
-            //                 ),
-            //                 borderRadius:
-            //                 BorderRadius.all(Radius.circular(20))),
-            //           )
-            //               : SizedBox(),
-            //         ],
-            //       )),
-            //   selectedColor: Color(0xff73544C),
-            // ),
+            DotNavigationBarItem(
+              icon: CircleAvatar(
+                  radius: 30.0,
+                  backgroundColor: _selectedTab.index == 4
+                      ? HexColor("263C32")
+                      : Colors.transparent,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ImageIcon(
+                        new AssetImage(
+                          "assets/images/myProfile.png",
+                        ),
+                        // color: Colors.white,
+                      ),
+                      SizedBox(
+                        height: 2,
+                      ),
+                      _selectedTab.index == 4
+                          ? Container(
+                        height: 4,
+                        width: 4,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                              color: Colors.transparent,
+                            ),
+                            borderRadius:
+                            BorderRadius.all(Radius.circular(20))),
+                      )
+                          : SizedBox(),
+                    ],
+                  )),
+              selectedColor: Color(0xff73544C),
+            ),
           ],
         ),
       ),

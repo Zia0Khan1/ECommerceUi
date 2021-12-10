@@ -12,20 +12,27 @@ class TextFieldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-          prefixIcon: Icon(icon==null?Icons.email_outlined: icon, ),
+          // prefixIcon: ImageIcon(
+          //   //  AssetImage(
+          //   //
+          //   //   "assets/images/mail.png",
+          //   // ),
+          // ),
+          prefixIcon: Icon(icon==null? Icons.email_outlined : icon, ),
           // border: OutlineInputBorder(
           //   borderRadius: BorderRadius.circular(20.0),
           //     // color: HexColor("#F7F7F7")
           //   // borderSide: BorderSide(color: Colors.red),
           // ),
           filled: true,
+
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            borderSide: BorderSide(color: Colors.grey.withOpacity(0.3), width: 2),
+            borderSide: BorderSide(color: Colors.transparent.withOpacity(0.1), width: 2),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            borderSide: BorderSide(color: Colors.grey, width: 2),
+            borderSide: BorderSide(color: Colors.transparent.withOpacity(0.1), width: 2),
           ),
           hintStyle: GoogleFonts.roboto(
               color: Colors.grey,

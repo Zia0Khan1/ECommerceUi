@@ -5,6 +5,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/categories_card.dart';
 import 'package:test_emulator/custom_widgets/new_arrival_card.dart';
 import 'package:test_emulator/custom_widgets/popular_product_card.dart';
+import 'package:test_emulator/views/notification_page.dart';
 
 class HomePage extends StatelessWidget {
   double? height;
@@ -26,10 +27,18 @@ class HomePage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: Icon(
-              Icons.notifications_none,
-              color: Colors.black,
-              size: 28.0,
+            child: InkWell(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NotificationPage()),
+                );
+              },
+              child: Icon(
+                Icons.notifications_none,
+                color: Colors.black,
+                size: 28.0,
+              ),
             ),
           ),
         ],
@@ -98,7 +107,7 @@ class HomePage extends StatelessWidget {
               _headingRow(heading: "Popular Product"),
               SizedBox(height: 15,),
               _popularProductRow(),
-
+          SizedBox(height: 150,),
 
             ],
           ),

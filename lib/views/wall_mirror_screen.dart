@@ -22,10 +22,7 @@ class _WallMirrorScreenState extends State<WallMirrorScreen> {
           },
           icon: Icon(Icons.chevron_left),
         ),
-        iconTheme: IconThemeData(
-
-            color: Colors.black
-        ),
+        iconTheme: IconThemeData(color: Colors.black),
         title: Text(
           "Wall Mirror",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
@@ -37,23 +34,25 @@ class _WallMirrorScreenState extends State<WallMirrorScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 setState(() {
                   toggle = !toggle!;
                 });
               },
-              child: ImageIcon(  AssetImage(toggle!? "assets/images/grid.png": "assets/images/coolicon.png",
-
-              ),
+              child: ImageIcon(
+                AssetImage(
+                  toggle!
+                      ? "assets/images/grid.png"
+                      : "assets/images/coolicon.png",
+                ),
                 color: Colors.black,
                 size: 18,
-
               ),
             ),
           ),
         ],
       ),
-      body: toggle!? ProductDetailTwo(): ProductDetailOne(),
+      body: toggle! ? ProductDetailTwo() : ProductDetailOne(),
     );
   }
 }
