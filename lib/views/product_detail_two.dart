@@ -7,7 +7,6 @@ class ProductDetailTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -40,26 +39,35 @@ class ProductDetailTwo extends StatelessWidget {
       //     ),
       //   ],
       // ),
-      body:Container(
+      body: Container(
         // color: Colors.grey.withOpacity(0.3),
         height: height,
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            children: [
-              SizedBox(height: 20,),
-GridCard(),
-SizedBox(height: 10,),
-GridCard(),
-              SizedBox(height: 10,),
-GridCard(),
-              SizedBox(height: 10,),
-GridCard(),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20,
+                ),
+                GridCard(),
+                SizedBox(
+                  height: 10,
+                ),
+                GridCard(),
+                SizedBox(
+                  height: 10,
+                ),
+                GridCard(),
+                SizedBox(
+                  height: 10,
+                ),
+                GridCard(),
+              ],
+            ),
           ),
         ),
-      ) ,
-
+      ),
     );
   }
 }

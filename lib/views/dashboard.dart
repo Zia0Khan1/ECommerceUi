@@ -1,6 +1,7 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:test_emulator/views/categories_page.dart';
 import 'package:test_emulator/views/home_page.dart';
 import 'package:test_emulator/views/my_cart_page.dart';
 import 'package:test_emulator/views/profile_page.dart';
@@ -32,18 +33,25 @@ class _DashBoardState extends State<DashBoard> {
       HomePage(),
       WishListPage(),
       MyCartPage(),
-      WallMirrorScreen(),
+      CategoriesPage(),
       ProfilePage(),
     ];
     super.initState();
   }
+
   double? height;
   double? width;
 
   @override
   Widget build(BuildContext context) {
-    height = MediaQuery.of(context).size.height;
-    width = MediaQuery.of(context).size.width;
+    height = MediaQuery
+        .of(context)
+        .size
+        .height;
+    width = MediaQuery
+        .of(context)
+        .size
+        .width;
     return Scaffold(
       extendBody: true,
       body: IndexedStack(
@@ -54,11 +62,11 @@ class _DashBoardState extends State<DashBoard> {
         padding: EdgeInsets.only(bottom: 10),
         child: DotNavigationBar(
           // backgroundColor: HexColor("F3F3F3"),
-          margin: EdgeInsets.only(left: 10, right: 10),
+          // margin: EdgeInsets.only(left: 5, right: 5),
           enableFloatingNavBar: false,
           currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           dotIndicatorColor: Colors.transparent,
-          itemPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+          itemPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.white,
           // EdgeInsetsGeometry ?
@@ -82,10 +90,11 @@ class _DashBoardState extends State<DashBoard> {
                       ImageIcon(
 
                         new AssetImage(
+
                           "assets/images/myHome.png",
 
                         ),
-
+                        color: _selectedTab.index==0?Colors.white : HexColor("CBCBCB"),
                         // color: Colors.white,
                       ),
                       SizedBox(
@@ -123,6 +132,7 @@ class _DashBoardState extends State<DashBoard> {
                         new AssetImage(
                           "assets/images/myLike.png",
                         ),
+                        color: _selectedTab.index==1?Colors.white : HexColor("CBCBCB"),
                         // color: Colors.white,
                       ),
                       SizedBox(
@@ -160,6 +170,7 @@ class _DashBoardState extends State<DashBoard> {
                         new AssetImage(
                           "assets/images/myCart.png",
                         ),
+                        color: _selectedTab.index==2 ?Colors.white : HexColor("CBCBCB"),
                         // color: Colors.white,
                       ),
                       SizedBox(
@@ -197,6 +208,7 @@ class _DashBoardState extends State<DashBoard> {
                         new AssetImage(
                           "assets/images/myRect.png",
                         ),
+                        color: _selectedTab.index==3?Colors.white : HexColor("CBCBCB"),
                         // color: Colors.white,
                       ),
                       SizedBox(
@@ -235,6 +247,7 @@ class _DashBoardState extends State<DashBoard> {
                         new AssetImage(
                           "assets/images/myProfile.png",
                         ),
+                        color: _selectedTab.index==4?Colors.white : HexColor("CBCBCB"),
                         // color: Colors.white,
                       ),
                       SizedBox(

@@ -35,21 +35,27 @@ class WishListPage extends StatelessWidget {
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              _cardRow(),
-              SizedBox(
-                height: 20,
-              ),
-              _cardRow(),
-              SizedBox(
-                height: 20,
-              ),
-              _cardRow(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20,
+                ),
+                _cardRow(),
+                SizedBox(
+                  height: 20,
+                ),
+                _cardRow(),
+                SizedBox(
+                  height: 20,
+                ),
+                _cardRow(),
+                SizedBox(
+                  height: 80,
+                ),
+
+              ],
+            ),
           ),
         ),
       ),

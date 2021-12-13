@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/button.dart';
 import 'package:test_emulator/custom_widgets/heading_two.dart';
 import 'package:test_emulator/custom_widgets/textfield.dart';
@@ -38,12 +39,12 @@ class EditProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     Container(
                       width: width,
                       height: height! * 0.3,
-                      color: Colors.transparent,
+                      color: Colors.white,
                       child: Center(
                         child: Stack(
                           alignment: Alignment.center,
@@ -131,6 +132,7 @@ class EditProfilePage extends StatelessWidget {
                     ),
 
                     TextFieldWidget(
+
                       hintText: "John Deo",
                     ),
                     SizedBox(
@@ -164,9 +166,22 @@ class EditProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              RoundButton(
-                btnText: "Save",
-              )
+              MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  elevation:2.0,
+                  minWidth: width!*0.9,
+                  height: 57,
+                  // color: Colors.orangeAccent,
+                  color: HexColor("263C32"),
+                  child: Text("Next",
+                      style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                  // onPressed:onPress!(),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+
+                  }
+              ),
             ],
           ),
         ));

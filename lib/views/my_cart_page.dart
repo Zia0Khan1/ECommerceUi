@@ -122,9 +122,24 @@ class MyCartPage extends StatelessWidget {
                 // ),
 
                 Center(
-                  child: RoundButton(
-                    btnText: "Checkout",
-                  ),
+                  child:MaterialButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                      elevation:2.0,
+                      minWidth: width!*0.9,
+                      height: 57,
+                      // color: Colors.orangeAccent,
+                      color: HexColor("263C32"),
+                      child: Text("Checkout",
+                          style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                      // onPressed:onPress!(),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ShippingAddress()),
+                        );
+                      }
+                  )
                 ),
                 SizedBox(
                   height: 150,

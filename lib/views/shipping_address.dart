@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/button.dart';
 import 'package:test_emulator/custom_widgets/shipping_address_card.dart';
+import 'package:test_emulator/views/add_address_page.dart';
 
 class ShippingAddress extends StatelessWidget {
-  const ShippingAddress({Key? key}) : super(key: key);
+  double? height;
+  double? width;
 
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
 
       appBar: AppBar(
@@ -56,9 +61,24 @@ class ShippingAddress extends StatelessWidget {
             ShippingAddressCard(),
             Spacer(),
 
-        RoundButton(
-        btnText: "Next",
-        ),
+            MaterialButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                elevation:2.0,
+                minWidth: width!*0.9,
+                height: 57,
+                // color: Colors.orangeAccent,
+                color: HexColor("263C32"),
+                child: Text("Next",
+                    style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                // onPressed:onPress!(),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AddAddressPage()),
+                  );
+                }
+            ),
           ],
         ),
       ),

@@ -15,19 +15,21 @@ class CartCard extends StatelessWidget {
       elevation: 2,
       child: Container(
 
-        height: height! * 0.15,
-        // color: Colors.lightGreen,
+        // height: height! * 0.15,
+
         child: Row(
           children: [
             Container(
-              // height: 140,
-              width: width! * 0.35,
+              height: 100,
+              // height: height! * 0.15,
+             // width: 60,
+              width: width! * 0.3,
               decoration: BoxDecoration(
 
                 image: DecorationImage(
                   scale: 0.8,
                   image: AssetImage("assets/images/wallmirror.png"),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -36,7 +38,7 @@ class CartCard extends StatelessWidget {
               width: width! * 0.6,
               // color: Colors.red,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left:8.0,top: 8,bottom: 5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -47,17 +49,23 @@ class CartCard extends StatelessWidget {
                           "Beautiful Decorative...",
                           style: GoogleFonts.roboto(
                             decoration: TextDecoration.none,
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: HexColor("263C32"),
                           ),
                         ),
+                        SizedBox(width: 5),
                         ImageIcon(new AssetImage(
+
                           "assets/images/delete.png",
-                        ))
+                        )
+                        ,
+                          color: HexColor("979797"),
+
+                        )
                       ],
                     ),
-                    SizedBox(height: 5),
+                    SizedBox(height: 7),
                     Text(
                       "Size: 24 inches..",
                       style: GoogleFonts.roboto(
@@ -90,6 +98,7 @@ class CartCard extends StatelessWidget {
                         // ),
                       ],
                     ),
+                    // SizedBox(height: 10,),
                   ],
                 ),
               ),

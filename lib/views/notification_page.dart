@@ -26,46 +26,48 @@ class NotificationPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            NotificationCard(
-              title: "Check your Passwords score",
-              text: "Just Now",
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            NotificationCard(
-              title: "Order success",
-              text: "2 hours ago",
-              color: HexColor("E2E2E2"),
-              iconColor: Colors.black,
-              image: AssetImage("assets/images/verified.png"),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            NotificationCard(
-              title: "Order arrived",
-              text: "4 hours ago",
-              color: HexColor("E2E2E2"),
-              iconColor: Colors.black,
-              image: AssetImage("assets/images/Parcel.png"),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            NotificationCard(
-              title: "Order arrived",
-              text: "4 hours ago",
-              color: HexColor("E2E2E2"),
-              iconColor: Colors.black,
-              image: AssetImage("assets/images/Cash.png"),
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              NotificationCard(
+                title: "Check your Passwords score",
+                text: "Just Now",
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              NotificationCard(
+                title: "Order success",
+                text: "2 hours ago",
+                color: HexColor("E2E2E2"),
+                iconColor: Colors.black,
+                image: AssetImage("assets/images/verified.png"),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              NotificationCard(
+                title: "Order arrived",
+                text: "4 hours ago",
+                color: HexColor("E2E2E2"),
+                iconColor: Colors.black,
+                image: AssetImage("assets/images/Parcel.png"),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              NotificationCard(
+                title: "Order arrived",
+                text: "4 hours ago",
+                color: HexColor("E2E2E2"),
+                iconColor: Colors.black,
+                image: AssetImage("assets/images/Cash.png"),
+              ),
+            ],
+          ),
         ),
       ),
     );

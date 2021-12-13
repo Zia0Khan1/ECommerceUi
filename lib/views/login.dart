@@ -6,6 +6,7 @@ import 'package:test_emulator/custom_widgets/heading_one.dart';
 import 'package:test_emulator/custom_widgets/heading_two.dart';
 import 'package:test_emulator/custom_widgets/textfield.dart';
 import 'package:test_emulator/demo_screen.dart';
+import 'package:test_emulator/views/dashboard.dart';
 import 'package:test_emulator/views/forgot_password.dart';
 import 'package:test_emulator/views/signup.dart';
 
@@ -82,14 +83,23 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 20,
                     ),
                     Center(
-                      child: RoundButton(
-                        btnText: "Login",
-                        // onPress: (){
-                        //   Navigator.push(
-                        //           context,
-                        //           MaterialPageRoute(builder: (context) => DemoScreen()),
-                        //         );
-                        // },
+                      child:    MaterialButton(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                          elevation:2.0,
+                          minWidth: width!*0.9,
+                          height: 57,
+                          // color: Colors.orangeAccent,
+                          color: HexColor("263C32"),
+                          child: Text("Login",
+                              style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                          // onPressed:onPress!(),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => DashBoard()),
+                            );
+                          }
                       ),
                     ),
                   ],
@@ -132,9 +142,15 @@ class _LoginScreenState extends State<LoginScreen> {
             decoration: InputDecoration(
                 filled: true,
                 fillColor: HexColor("#F7F7F7"),
+                // fillColor: Colors.red,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  borderSide: BorderSide(color: Colors.transparent.withOpacity(0.1), width: 2),
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: HexColor("#F7F7F7")),
+
+                  // borderSide: BorderSide(color: HexColor("#F7F7F7")),
                 ),
               // prefixIcon: Container(
               //     margin: EdgeInsets.only(right: 5.0),

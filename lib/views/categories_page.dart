@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_emulator/custom_widgets/categories_list.dart';
+import 'package:test_emulator/views/wall_mirror_screen.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({Key? key}) : super(key: key);
@@ -29,8 +30,18 @@ class CategoriesPage extends StatelessWidget {
       body: Column(
        children: [
          SizedBox(height: 15,),
-         CategoriesListTile(
-           title: "Wall Mirror",
+         InkWell(
+
+           onTap: (){
+
+             Navigator.push(
+               context,
+               MaterialPageRoute(builder: (context) => WallMirrorScreen()),
+             );
+           },
+           child: CategoriesListTile(
+             title: "Wall Mirror",
+           ),
          ),
          SizedBox(height: 10,),
          CategoriesListTile(

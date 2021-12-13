@@ -20,8 +20,9 @@ class NotificationCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
+      elevation: 2,
       shape: RoundedRectangleBorder(
-        side: BorderSide(color: Colors.white, width: 1),
+        side: BorderSide(color: Colors.white, ),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Container(
@@ -67,7 +68,7 @@ class NotificationCard extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       color: Colors.black,
                       decoration: TextDecoration.none,
-                      fontSize: 22,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -79,7 +80,7 @@ class NotificationCard extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       color: HexColor("979797"),
                       decoration: TextDecoration.none,
-                      fontSize: 15,
+                      fontSize: 12,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
@@ -88,7 +89,7 @@ class NotificationCard extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       color: HexColor("979797"),
                       decoration: TextDecoration.none,
-                      fontSize: 15,
+                      fontSize: 12,
                       fontWeight: FontWeight.w300,
                     ),
                   ),

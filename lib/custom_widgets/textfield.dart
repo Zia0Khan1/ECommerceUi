@@ -39,7 +39,7 @@ class TextFieldWidget extends StatelessWidget {
               decoration: TextDecoration.none,
               fontWeight: FontWeight.w500),
           hintText: hintText,
-          fillColor: HexColor("#F7F7F7")),
+          fillColor: HexColor("F7F7F7")),
     );
   }
 }
