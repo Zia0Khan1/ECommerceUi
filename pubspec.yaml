@@ -37,6 +37,7 @@ dependencies:
   flutter_svg:
   dot_navigation_bar:
   flutter_switch:
+  country_code_picker:
 
 
 dev_dependencies:

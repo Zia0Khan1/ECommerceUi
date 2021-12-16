@@ -21,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   double? height;
   double? width;
   bool isChecked = false;
+  bool _showPassword = false;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Welcome back.",
                         style: GoogleFonts.roboto(
-                          color:Colors.black,
+                          color: Colors.black,
                           decoration: TextDecoration.none,
                           fontWeight: FontWeight.w400,
                         ),
@@ -65,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Please Sign in to continue",
                         style: GoogleFonts.roboto(
-                          color:Colors.black,
+                          color: Colors.black,
                           decoration: TextDecoration.none,
                           fontWeight: FontWeight.w400,
                         ),
@@ -83,30 +84,34 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 20,
                     ),
                     Center(
-                      child:    MaterialButton(
+                      child: MaterialButton(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                          elevation:2.0,
-                          minWidth: width!*0.9,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20.0))),
+                          elevation: 2.0,
+                          minWidth: width! * 0.9,
                           height: 57,
                           // color: Colors.orangeAccent,
                           color: HexColor("263C32"),
                           child: Text("Login",
-                              style: TextStyle(fontSize: 18.0, color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 18.0, color: Colors.white)),
                           // onPressed:onPress!(),
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => DashBoard()),
+                              MaterialPageRoute(
+                                  builder: (context) => DashBoard()),
                             );
-                          }
-                      ),
+                          }),
                     ),
                   ],
                 ),
                 Spacer(),
                 _textRow(),
-                SizedBox(height: 5,)
+                SizedBox(
+                  height: 5,
+                )
               ],
             )),
       ),
@@ -122,9 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
           H2(
             h2: "Username or Email",
           ),
-          SizedBox(
-            height: 5,
-          ),
+          SizedBox(height: 10),
           TextFieldWidget(
             hintText: "Johndeo@gmail.com",
           ),
@@ -135,23 +138,30 @@ class _LoginScreenState extends State<LoginScreen> {
             h2: "Password",
           ),
           SizedBox(
-            height: 5,
+            height: 10,
           ),
           TextField(
-            obscureText: true,
+            obscureText: !this._showPassword,
             decoration: InputDecoration(
-                filled: true,
-                fillColor: HexColor("#F7F7F7"),
-                // fillColor: Colors.red,
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  borderSide: BorderSide(color: Colors.transparent.withOpacity(0.1), width: 2),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
+              filled: true,
+              focusColor: HexColor("6C6A81"),
+              fillColor: HexColor("#F7F7F7"),
+              // fillColor: Colors.red,
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                borderSide: BorderSide(
+                    color: Colors.transparent.withOpacity(0.1), width: 2),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                borderSide: BorderSide(
+                    color: Colors.transparent.withOpacity(0.1), width: 2),
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20.0),
 
-                  // borderSide: BorderSide(color: HexColor("#F7F7F7")),
-                ),
+                // borderSide: BorderSide(color: HexColor("#F7F7F7")),
+              ),
               // prefixIcon: Container(
               //     margin: EdgeInsets.only(right: 5.0),
               //     decoration: BoxDecoration(
@@ -167,15 +177,18 @@ class _LoginScreenState extends State<LoginScreen> {
               //       width: 20,
               //     )),
 
-
-                prefixIcon:Image(image: AssetImage('assets/images/lockkk.png')),
-                // prefixIcon: Icon(Icons.lock_outline_rounded),
-                suffixIcon: Icon(
-
-                  Icons.remove_red_eye_outlined,
-                  color: Colors.black,
+              prefixIcon: Image(image: AssetImage('assets/images/lockkk.png')),
+              // prefixIcon: Icon(Icons.lock_outline_rounded),
+              suffixIcon: IconButton(
+                icon: Icon(
+                  this._showPassword ? Icons.visibility : Icons.visibility_off,
+                  color: this._showPassword ? Colors.black : Colors.black,
                 ),
-                hintText: "........."),
+                onPressed: () {
+                  setState(() => this._showPassword = !this._showPassword);
+                },
+              ),
+            ),
           )
         ],
       ),
@@ -197,7 +210,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     return Padding(
-      padding: const EdgeInsets.only(left:12.0,right: 12.0),
+      padding: const EdgeInsets.only(left: 12.0, right: 12.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -224,7 +237,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ],
           ),
           InkWell(
-            onTap: (){
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ForgotPasswordScreen()),
@@ -254,7 +267,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         InkWell(
-          onTap: (){
+          onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => SignUpPage()),

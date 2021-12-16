@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:test_emulator/custom_widgets/OtpWidget.dart';
 import 'package:test_emulator/custom_widgets/heading_one.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:test_emulator/views/forgot_password.dart';
@@ -51,7 +52,7 @@ class OTPScreen extends StatelessWidget {
                       fontSize: 16,
                       color: Colors.black,
                       decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.normal,
                     ),
                   ),
                 ),
@@ -62,38 +63,38 @@ class OTPScreen extends StatelessWidget {
                       fontSize: 16,
                       color: Colors.black,
                       decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.normal,
                     ),
                   ),
                 ),
-                SizedBox(height: 15,),
-
-                OtpTextField(
-                  numberOfFields: 4,
-                  borderColor: HexColor("1C1C1C"),
-                  //set to true to show as box or false to show as dash
-                  showFieldAsBox: true,
-                  fillColor: Colors.white,
-                  enabledBorderColor: HexColor("1C1C1C"),
-                  focusedBorderColor: HexColor("263C32"),
-                  cursorColor: Colors.transparent,
-                  //runs when a code is typed in
-                  onCodeChanged: (String code) {
-                    //handle validation or checks here
-                  },
-                  onSubmit: (String verificationCode){
-                    showDialog(
-                        context: context,
-                        builder: (context){
-                          return AlertDialog(
-                            title: Text("Verification Code"),
-                            content: Text('Code entered is $verificationCode'),
-                          );
-                        }
-                    );
-                  }, // end onSubmit
-                ),
-                SizedBox(height: 10,),
+                SizedBox(height: 25,),
+OtpWidget(),
+                // OtpTextField(
+                //   numberOfFields: 4,
+                //   borderColor: HexColor("1C1C1C"),
+                //   //set to true to show as box or false to show as dash
+                //   showFieldAsBox: true,
+                //   fillColor: Colors.white,
+                //   enabledBorderColor: HexColor("1C1C1C"),
+                //   focusedBorderColor: HexColor("263C32"),
+                //   cursorColor: Colors.transparent,
+                //   //runs when a code is typed in
+                //   onCodeChanged: (String code) {
+                //     //handle validation or checks here
+                //   },
+                //   onSubmit: (String verificationCode){
+                //     showDialog(
+                //         context: context,
+                //         builder: (context){
+                //           return AlertDialog(
+                //             title: Text("Verification Code"),
+                //             content: Text('Code entered is $verificationCode'),
+                //           );
+                //         }
+                //     );
+                //   }, // end onSubmit
+                // ),
+                SizedBox(height: 25,),
                 Center(
                   child:  MaterialButton(
                     shape: RoundedRectangleBorder(
@@ -138,7 +139,7 @@ _textRow(context),
           style: GoogleFonts.roboto(
             decoration: TextDecoration.none,
             color: HexColor("979797"),
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.normal,
           ),
         ),
         InkWell(
@@ -148,7 +149,7 @@ _textRow(context),
             "Resend Code",
             style: GoogleFonts.roboto(
               decoration: TextDecoration.none,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.bold,
               color: HexColor("263C32"),
             ),
           ),

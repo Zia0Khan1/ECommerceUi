@@ -22,8 +22,10 @@ class LikeWidget extends StatelessWidget {
         child: Align(
             alignment: Alignment.center,
             child: Image(
+              // color: Colors.black,
               image: AssetImage("assets/images/like.png",
               ),
+              // color: Color,
             )
         ),
       ),

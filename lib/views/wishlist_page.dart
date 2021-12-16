@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/new_arrival_card.dart';
+import 'package:test_emulator/custom_widgets/wish_list_card.dart';
+import 'package:test_emulator/views/notification_page.dart';
 
 class WishListPage extends StatelessWidget {
   double? height;
@@ -15,16 +18,26 @@ class WishListPage extends StatelessWidget {
           "Wishlist",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
+        automaticallyImplyLeading:false,
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0.0,
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: Icon(
-              Icons.notifications_none,
-              color: Colors.black,
-              size: 28.0,
+            child: InkWell(
+              onTap: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NotificationPage()),
+                );
+              },
+              child: Icon(
+                Icons.notifications_none,
+                color: Colors.black,
+                size: 28.0,
+              ),
             ),
           ),
         ],
@@ -32,9 +45,9 @@ class WishListPage extends StatelessWidget {
       body: Container(
         height: height,
         width: width,
-        color: Colors.white,
+        color: HexColor("F3F3F3"),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(15.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -51,7 +64,7 @@ class WishListPage extends StatelessWidget {
                 ),
                 _cardRow(),
                 SizedBox(
-                  height: 80,
+                  height: 120,
                 ),
 
               ],
@@ -64,17 +77,27 @@ class WishListPage extends StatelessWidget {
 
   _cardRow() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        NewArrivalCards(
-          myText: "Round Shape wall.6",
-          myPrice: "3234.36",
+
+        WishListCard(
+          myText: "Mirror Wall Decor",
+          myPrice: "\$2599.0",
+        ),
+        SizedBox(width: 15,),
+        WishListCard(
+          myText: "Mirror Wall Decor",
+          myPrice: "\$2599.0",
         ),
 
-        NewArrivalCards(
-          myText: "Round Shape wall.6",
-          myPrice: "3234.36",
-        ),
+        // NewArrivalCards(
+        //   myText: "Round Shape wall.6",
+        //   myPrice: "3234.36",
+        // ),NewArrivalCards(
+        //   myText: "Round Shape wall.6",
+        //   myPrice: "3234.36",
+        // ),
+
       ],
     );
   }

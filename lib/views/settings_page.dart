@@ -91,8 +91,8 @@ class _SettingsPageState extends State<SettingsPage> {
               width: 70,
               // color: Colors.red,
               child: FlutterSwitch(
-                height: 40,
-                width: 70,
+                height: 30,
+                width: 50,
                 activeTextColor: Colors.transparent,
                 inactiveTextColor: Colors.transparent,
                 toggleColor: Colors.white,

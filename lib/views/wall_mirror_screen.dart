@@ -18,7 +18,10 @@ class _WallMirrorScreenState extends State<WallMirrorScreen> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
+
+            FocusScope.of(context).unfocus();
             Navigator.pop(context);
+
           },
           icon: Icon(Icons.chevron_left),
         ),
@@ -27,7 +30,7 @@ class _WallMirrorScreenState extends State<WallMirrorScreen> {
           "Wall Mirror",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0.0,
         actions: [

@@ -158,12 +158,12 @@ class OrderDetailsPage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              _textRow("Shipping fee", "56.336"),
+              _textRow("Shipping fee", "\$56.336"),
 
               SizedBox(
                 height: 5,
               ),
-              _textRow("Shipping fee", "56.336"),
+              _textRow("Shipping fee", "\$56.336"),
               SizedBox(height: 5,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,16 +173,16 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
               Text(
-                "568.36",
+                "\$568.36",
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
@@ -193,11 +193,25 @@ class OrderDetailsPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Center(
-                child: RoundButton(
-                  btnText: "Re-Order",
-                ),
-              ),
+            Center(
+              child: MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                      BorderRadius.all(Radius.circular(20.0))),
+                  elevation: 2.0,
+                  minWidth: width! * 0.9,
+                  height: 57,
+                  // color: Colors.orangeAccent,
+                  color: HexColor("263C32"),
+                  child: Text("Re-Order",
+                      style: TextStyle(
+                          fontSize: 18.0, color: Colors.white)),
+                  // onPressed:onPress!(),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+            ),
+
               SizedBox(
                 height: 10,
               ),
@@ -217,7 +231,7 @@ class OrderDetailsPage extends StatelessWidget {
           style: GoogleFonts.roboto(
             decoration: TextDecoration.none,
             fontSize: 16,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.normal,
             color: HexColor("979797"),
           ),
         ),
@@ -226,7 +240,7 @@ class OrderDetailsPage extends StatelessWidget {
           style: GoogleFonts.roboto(
             decoration: TextDecoration.none,
             fontSize: 16,
-            fontWeight: FontWeight.w300,
+            fontWeight: FontWeight.normal,
             color: HexColor("979797"),
           ),
         ),

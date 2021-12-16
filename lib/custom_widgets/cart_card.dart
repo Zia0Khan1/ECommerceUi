@@ -50,7 +50,7 @@ class CartCard extends StatelessWidget {
                           style: GoogleFonts.roboto(
                             decoration: TextDecoration.none,
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.bold,
                             color: HexColor("263C32"),
                           ),
                         ),
@@ -71,15 +71,15 @@ class CartCard extends StatelessWidget {
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
                         fontSize: 14,
-                        fontWeight: FontWeight.w300,
-                        color: HexColor("263C32"),
+                        fontWeight: FontWeight.normal,
+                        color:Colors.black,
                       ),
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      "6699.0",
+                      "\$6699.0",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
                         fontSize: 18,

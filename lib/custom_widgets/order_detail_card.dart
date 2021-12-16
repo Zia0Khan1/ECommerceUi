@@ -68,7 +68,7 @@ class OrderDetailCard extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      "6699.0",
+                      "\$6699.0",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
                         fontSize: 18,

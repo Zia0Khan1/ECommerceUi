@@ -21,6 +21,7 @@ class MyCartPage extends StatelessWidget {
           "My Cart",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
+        automaticallyImplyLeading:false,
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0.0,
@@ -60,7 +61,7 @@ class MyCartPage extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       decoration: TextDecoration.none,
                       fontSize: 20,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.bold,
                       color: HexColor("263C32"),
                     ),
                   ),
@@ -83,11 +84,11 @@ class MyCartPage extends StatelessWidget {
                             height: 30,
                           ),
                           Text(
-                            "6699.0",
+                            "\$6699.0",
                             style: GoogleFonts.roboto(
                               decoration: TextDecoration.none,
                               fontSize: 30,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.bold,
                               color: HexColor("263C32"),
                             ),
                           ),

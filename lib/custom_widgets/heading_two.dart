@@ -13,7 +13,7 @@ class H2 extends StatelessWidget {
         color: Colors.black,
         decoration: TextDecoration.none,
         fontSize: 14,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.normal,
       ),
     );
   }

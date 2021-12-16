@@ -13,7 +13,8 @@ class CategoriesPage extends StatelessWidget {
           "Categories",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
-        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading:false,
+        backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0.0,
         actions: [
@@ -33,7 +34,6 @@ class CategoriesPage extends StatelessWidget {
          InkWell(
 
            onTap: (){
-
              Navigator.push(
                context,
                MaterialPageRoute(builder: (context) => WallMirrorScreen()),

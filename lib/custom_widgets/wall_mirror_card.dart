@@ -3,33 +3,28 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/like_widget.dart';
 
-class PopulaProductCard extends StatelessWidget {
+class WallMirrorCard extends StatelessWidget {
   double? height;
   double? width;
 
   final String? myText;
   final String? myPrice;
 
-  PopulaProductCard({this.myText, this.myPrice});
+  WallMirrorCard({this.myText, this.myPrice});
 
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ClipRRect(
-      borderRadius: BorderRadius.circular(10.0),
+      borderRadius: BorderRadius.circular(15.0),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Container(
-
-      decoration: BoxDecoration(
-          borderRadius: new BorderRadius.circular(10)
-
-      ),
-
-          width: width!*0.36,
+          // color: Colors.red,
+          width: width!*0.4,
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Column(
@@ -39,12 +34,12 @@ class PopulaProductCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     height: 140,
-                    width: width!*0.35,
+                    width: width!*0.38,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         scale: 0.8,
-                        image: AssetImage("assets/images/hangduck.png"),
-                        fit: BoxFit.cover,
+                        image: AssetImage("assets/images/moon.png"),
+                        fit: BoxFit.fitWidth,
                       ),
                     ),
                     child: Align(
@@ -53,7 +48,6 @@ class PopulaProductCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 5,),
                 Text(
                   myText!,
                   style: GoogleFonts.roboto(
@@ -91,12 +85,8 @@ class PopulaProductCard extends StatelessWidget {
                             color: HexColor("263C32"),
                           ),
                         ),
-                        child: Icon(
-                          Icons.add,
-                          size: 15,
-                          color: Colors.white,
-                        ),
-                      )
+                        child: Icon(Icons.add,size: 15,color: Colors.white,),)
+
                     ],
                   ),
                 ),

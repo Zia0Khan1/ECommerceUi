@@ -26,7 +26,7 @@ class MyOrderCard extends StatelessWidget {
                 image: DecorationImage(
                   scale: 0.8,
                   image: AssetImage("assets/images/wallmirror.png"),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.fitWidth,
                 ),
               ),
             ),

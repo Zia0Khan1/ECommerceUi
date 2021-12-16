@@ -34,10 +34,10 @@ class ShippingAddressCard extends StatelessWidget {
                   Text(
                     "Edit",
                     style: GoogleFonts.roboto(
-                      color: Colors.black,
+                      color: HexColor("263C32"),
                       decoration: TextDecoration.none,
                       fontSize: 14,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
@@ -48,14 +48,14 @@ class ShippingAddressCard extends StatelessWidget {
                     color: Colors.black,
                     decoration: TextDecoration.none,
                     fontSize: 14,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.normal,
                   )),
               Text("Chino Hills, CA 91709, United States",
                   style: GoogleFonts.roboto(
                     color: Colors.black,
                     decoration: TextDecoration.none,
                     fontSize: 14,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.normal,
                   )),
 
               SizedBox(
@@ -95,7 +95,7 @@ class ShippingAddressCard extends StatelessWidget {
         Text(
           "Use as the shipping address",
           style: GoogleFonts.roboto(
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.normal,
 
             color: Colors.black,
             decoration: TextDecoration.none,

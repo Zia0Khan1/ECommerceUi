@@ -42,8 +42,10 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
             ),
+
           ],
-          iconTheme: IconThemeData(color: Colors.black),
+          automaticallyImplyLeading:false,
+          // iconTheme: IconThemeData(color: Colors.black),
           title: Text(
             "Profile",
             style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
@@ -52,72 +54,74 @@ class ProfilePage extends StatelessWidget {
           centerTitle: true,
           elevation: 0.0,
         ),
-        body: Column(
-          children: [
-            SizedBox(height: 20,),
-            Container(
-              height: height!*0.3,
-              width: width,
-              color: Colors.white,
-              child: Column(
-                children: [
-                  CircleAvatar(
-                    backgroundColor: Colors.transparent,
-                    radius: 55,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(55),
-                      child: Image(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 20,),
+              Container(
+                height: height!*0.3,
+                width: width,
+                color: Colors.white,
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      radius: 55,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(55),
+                        child: Image(
 
-                        image: AssetImage("assets/images/person.png",
+                          image: AssetImage("assets/images/person.png",
+                          ),
+
                         ),
-
                       ),
                     ),
-                  ),
-                  SizedBox(height: 10,),
-                  H1(h1: "John Deo"),
+                    SizedBox(height: 10,),
+                    H1(h1: "John Deo"),
 
-                  SizedBox(height: 10,),
-                  Text("Johndeo123@gmail.com",   style: GoogleFonts.roboto(
-                    color:Colors.grey,
-                    fontSize: 16,
-                    decoration: TextDecoration.none,
-                    fontWeight: FontWeight.w300,
-                  ),),
+                    SizedBox(height: 10,),
+                    Text("Johndeo123@gmail.com",   style: GoogleFonts.roboto(
+                      color:Colors.grey,
+                      fontSize: 16,
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.w300,
+                    ),),
 
-                  SizedBox(height: 20,),
-                ],
+                    SizedBox(height: 20,),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: 20,),
-            InkWell(
+              SizedBox(height: 20,),
+              InkWell(
 
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyOrderPage()),
-                );
-              },
-              child: CategoriesListTile(
-                title: "My Order",
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyOrderPage()),
+                  );
+                },
+                child: CategoriesListTile(
+                  title: "My Order",
+                ),
               ),
-            ),
-            InkWell(
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SettingsPage()),
-                );
-              },
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()),
+                  );
+                },
 
-              child: CategoriesListTile(
-                title: "Settings",
+                child: CategoriesListTile(
+                  title: "Settings",
+                ),
               ),
-            ),
-            CategoriesListTile(
-              title: "Logout",
-            ),
-          ],
+              CategoriesListTile(
+                title: "Logout",
+              ),
+            ],
+          ),
         ));
   }
 }

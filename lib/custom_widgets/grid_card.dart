@@ -29,6 +29,7 @@ class GridCard extends StatelessWidget {
               height: 100,
               width: width! * 0.3,
               decoration: BoxDecoration(
+                // color: Colors.red,
                 image: DecorationImage(
                   scale: 0.8,
                   image: AssetImage("assets/images/wallmirror.png"),

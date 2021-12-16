@@ -3,6 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/button.dart';
 import 'package:test_emulator/custom_widgets/shipping_address_card.dart';
 import 'package:test_emulator/views/add_address_page.dart';
+import 'package:test_emulator/views/order_sccess_page.dart';
 
 class ShippingAddress extends StatelessWidget {
   double? height;
@@ -35,20 +36,30 @@ class ShippingAddress extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
-            child: ImageIcon( new AssetImage("assets/images/Plus.png",
+            child: InkWell(
+              onTap: (){
 
-            ),
-              color: Colors.black,
-              size: 18,
-              // child: Icon(
-              //   Image(image: Asset)
-              //   // Image.asset(
-              //   //         'assets/images/lock.png',
-              //   //         height: 20,
-              //   //         width: 20,
-              //   //       ),
-              //   color: Colors.black,
-              //   size: 28.0,
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddAddressPage()),
+                );
+              },
+
+              child: ImageIcon( new AssetImage("assets/images/Plus.png",
+
+              ),
+                color: Colors.black,
+                size: 18,
+                // child: Icon(
+                //   Image(image: Asset)
+                //   // Image.asset(
+                //   //         'assets/images/lock.png',
+                //   //         height: 20,
+                //   //         width: 20,
+                //   //       ),
+                //   color: Colors.black,
+                //   size: 28.0,
+              ),
             ),
           ),
         ],
@@ -75,7 +86,7 @@ class ShippingAddress extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => AddAddressPage()),
+                    MaterialPageRoute(builder: (context) => OrderSuccessPage()),
                   );
                 }
             ),

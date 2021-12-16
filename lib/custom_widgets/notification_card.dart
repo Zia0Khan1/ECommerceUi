@@ -20,7 +20,7 @@ class NotificationCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
-      elevation: 2,
+      // elevation: 2,
       shape: RoundedRectangleBorder(
         side: BorderSide(color: Colors.white, ),
         borderRadius: BorderRadius.circular(10),

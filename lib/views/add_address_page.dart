@@ -62,6 +62,13 @@ class AddAddressPage extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
+            AddAddressCard(
+              title: "Zip Code(Postal Code)",
+              description: "91709",
+            ),
+            SizedBox(
+              height: 15,
+            ),
             _lowerContainer(),
             Spacer(),
             MaterialButton(
@@ -76,10 +83,7 @@ class AddAddressPage extends StatelessWidget {
                     style: TextStyle(fontSize: 18.0, color: Colors.white)),
                 // onPressed:onPress!(),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => OrderSuccessPage()),
-                  );
+                  Navigator.pop(context);
                 }
             )
           ],
