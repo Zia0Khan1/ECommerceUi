@@ -14,6 +14,7 @@ class AddAddressPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -23,7 +24,7 @@ class AddAddressPage extends StatelessWidget {
         ),
         iconTheme: IconThemeData(color: Colors.black),
         title: Text(
-          "Shipping Address",
+          "Add Address",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
         backgroundColor: Colors.white,

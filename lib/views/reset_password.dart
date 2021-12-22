@@ -119,7 +119,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   //       height: 20,
                   //       width: 20,
                   //     )),
-
+                  hintText: "Password",
+                  hintStyle: GoogleFonts.roboto(
+                      color: HexColor("6C6A81"),
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.normal),
                   prefixIcon:
                   Image(image: AssetImage('assets/images/lockkk.png')),
                   // prefixIcon: Icon(Icons.lock_outline_rounded),
@@ -184,7 +188,11 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   //       height: 20,
                   //       width: 20,
                   //     )),
-
+                  hintText: "Confirm Password",
+                  hintStyle: GoogleFonts.roboto(
+                      color: HexColor("6C6A81"),
+                      decoration: TextDecoration.none,
+                      fontWeight: FontWeight.normal),
                   prefixIcon:
                   Image(image: AssetImage('assets/images/lockkk.png')),
                   // prefixIcon: Icon(Icons.lock_outline_rounded),
@@ -216,7 +224,10 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   color: HexColor("263C32"),
                   child: Text("Reset",
                       style: TextStyle(fontSize: 16.0, color: Colors.white)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+
+                  },
                 ),
               ),
               Spacer(),

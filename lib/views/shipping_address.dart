@@ -69,6 +69,7 @@ class ShippingAddress extends StatelessWidget {
         child: Column(
           children: [
             ShippingAddressCard(),
+            SizedBox(height: 10,),
             ShippingAddressCard(),
             Spacer(),
 

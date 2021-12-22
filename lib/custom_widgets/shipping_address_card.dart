@@ -2,16 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class ShippingAddressCard extends StatelessWidget {
+class ShippingAddressCard extends StatefulWidget {
+  @override
+  State<ShippingAddressCard> createState() => _ShippingAddressCardState();
+}
+
+class _ShippingAddressCardState extends State<ShippingAddressCard> {
   double? height;
+
   double? width;
+
   bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
 
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
+      elevation: 2,
       child: Container(
         width: width,
         child: Padding(
@@ -69,6 +78,7 @@ class ShippingAddressCard extends StatelessWidget {
       ),
     );
   }
+
   _row() {
     //checkbox method
     Color getColor(Set<MaterialState> states) {
@@ -78,9 +88,9 @@ class ShippingAddressCard extends StatelessWidget {
         MaterialState.focused,
       };
       if (states.any(interactiveStates.contains)) {
-        return HexColor("263C32");
+        return Colors.grey.withOpacity(0.3);
       }
-      return Colors.black.withOpacity(0.3);
+      return HexColor("263C32");
     }
 
     return Row(
@@ -89,7 +99,11 @@ class ShippingAddressCard extends StatelessWidget {
 
           fillColor: MaterialStateProperty.resolveWith(getColor),
           value: isChecked,
-       onChanged: (bool){},
+          onChanged: (bool? value) {
+            setState(() {
+              isChecked = value!;
+            });
+          },
 
         ),
         Text(

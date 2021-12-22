@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/grid_card.dart';
 
 class ProductDetailTwo extends StatelessWidget {
@@ -10,6 +11,8 @@ class ProductDetailTwo extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
+
       // appBar: AppBar(
       //   leading: IconButton(
       //     onPressed: () {

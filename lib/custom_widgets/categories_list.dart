@@ -10,21 +10,30 @@ class CategoriesListTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left:8.0,right:8.0),
       child: Card(
-        elevation: 1,
-        child: ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal:
-          16.0),
-          title: Text(
-            title!,
-            style: GoogleFonts.roboto(
-              fontSize: 16,
-              color: Colors.black,
-              decoration: TextDecoration.none,
-              fontWeight: FontWeight.normal,
+
+        elevation: 3,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: Colors.white, ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(25),
+          child: ListTile(
+            contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal:
+            16.0),
+            title: Text(
+              title!,
+              style: GoogleFonts.roboto(
+                fontSize: 16,
+                color: Colors.black,
+                decoration: TextDecoration.none,
+                fontWeight: FontWeight.normal,
+              ),
             ),
+            tileColor: Colors.white,
+            trailing: Icon(Icons.chevron_right),
           ),
-          tileColor: Colors.white,
-          trailing: Icon(Icons.chevron_right),
         ),
       ),
     );

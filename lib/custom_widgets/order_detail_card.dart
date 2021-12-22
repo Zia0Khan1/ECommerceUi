@@ -17,7 +17,7 @@ class OrderDetailCard extends StatelessWidget {
         .size
         .width;
     return Card(
-      elevation: 2,
+      elevation: 3,
       child: Container(
 
         height: height! * 0.15,

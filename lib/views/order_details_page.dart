@@ -15,6 +15,7 @@ class OrderDetailsPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -48,7 +49,7 @@ class OrderDetailsPage extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       decoration: TextDecoration.none,
                       fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.normal,
                       color: HexColor("263C32"),
                     ),
                   ),
@@ -66,7 +67,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.normal,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -78,7 +79,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.normal,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -90,7 +91,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.bold,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -99,7 +100,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.bold,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -111,7 +112,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.normal,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -123,7 +124,7 @@ class OrderDetailsPage extends StatelessWidget {
                 style: GoogleFonts.roboto(
                   decoration: TextDecoration.none,
                   fontSize: 16,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.bold,
                   color: HexColor("263C32"),
                 ),
               ),
@@ -158,12 +159,12 @@ class OrderDetailsPage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              _textRow("Shipping fee", "\$56.336"),
+              _textRow("Shipping fee", "\$0.00"),
 
               SizedBox(
                 height: 5,
               ),
-              _textRow("Shipping fee", "\$56.336"),
+              _textRow("Sub total", "\$56.336"),
               SizedBox(height: 5,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

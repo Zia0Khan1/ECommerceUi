@@ -173,7 +173,7 @@ class EditProfilePage extends StatelessWidget {
                         height: 57,
                         // color: Colors.orangeAccent,
                         color: HexColor("263C32"),
-                        child: Text("Next",
+                        child: Text("Save",
                             style: TextStyle(fontSize: 18.0, color: Colors.white)),
                         // onPressed:onPress!(),
                         onPressed: () {

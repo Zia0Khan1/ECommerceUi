@@ -24,17 +24,20 @@ class WallMirrorCard extends StatelessWidget {
         ),
         child: Container(
           // color: Colors.red,
-          width: width!*0.4,
+          width: width!*0.43,
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10.0),
+                    topLeft: Radius.circular(10.0),
+                  ),
                   child: Container(
                     height: 140,
-                    width: width!*0.38,
+                    width: width!*0.4,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         scale: 0.8,

@@ -54,9 +54,11 @@ class NotificationCard extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(50))),
 //simplelock.png
                   child: image==null ? ImageIcon(
-                    AssetImage("assets/images/simplelock.png"),
+
+                    AssetImage("assets/images/simplelock.png",),
+                    size: 40,
                     color: iconColor==null ?Colors.white: Colors.black,
-                    size: 30,
+
                   ):ImageIcon(image),
                 ),
               ),
@@ -68,8 +70,8 @@ class NotificationCard extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       color: Colors.black,
                       decoration: TextDecoration.none,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      fontWeight: FontWeight.normal,
                     ),
                   ),
                   SizedBox(

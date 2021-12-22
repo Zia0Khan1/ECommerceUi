@@ -93,7 +93,7 @@ class WishListPage extends StatelessWidget {
         // NewArrivalCards(
         //   myText: "Round Shape wall.6",
         //   myPrice: "3234.36",
-        // ),NewArrivalCards(
+        // ),NewArrivalCards(d
         //   myText: "Round Shape wall.6",
         //   myPrice: "3234.36",
         // ),

@@ -16,13 +16,14 @@ class HomePage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         title: Text(
           "Home",
           style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
         ),
         automaticallyImplyLeading:false,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0.0,
         actions: [
@@ -51,6 +52,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+
                 alignment: Alignment.center,
                 child: Container(
                   width: width! * 0.92,
@@ -208,21 +210,21 @@ class HomePage extends StatelessWidget {
             myPrice: "\$4599.00",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           NewArrivalCards(
             myText: "Wall Mirror Design...",
             myPrice: "\$5684.1",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           NewArrivalCards(
             myText: "Wall Mirror Design...",
             myPrice: "\$9861.2",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           NewArrivalCards(
             myText: "Wall Mirror Design...l",
@@ -250,21 +252,21 @@ class HomePage extends StatelessWidget {
             myText: "Swan Wall Art",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           PopulaProductCard(
             myPrice: "\$9898.3",
             myText: "Swan Wall Art",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           PopulaProductCard(
             myPrice: "\$9898.3",
             myText: "Swan Wall Art",
           ),
           SizedBox(
-            width: 20,
+            width: 10,
           ),
           PopulaProductCard(
             myPrice: "\$9898.3",

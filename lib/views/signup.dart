@@ -68,9 +68,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: Text(
                           "Welcome! Please Sign Up using your",
                           style: GoogleFonts.roboto(
+                            fontSize: 16,
                             color: Colors.black,
                             decoration: TextDecoration.none,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
@@ -78,9 +79,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: Text(
                           "personal details to continue",
                           style: GoogleFonts.roboto(
+                            fontSize: 16,
                             color: Colors.black,
                             decoration: TextDecoration.none,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.normal,
                           ),
                         ),
                       ),
@@ -128,6 +130,9 @@ class _SignUpPageState extends State<SignUpPage> {
                         height: 10,
                       ),
                       TextField(
+                        style: TextStyle(
+                            color: HexColor("6C6A81")
+                        ),
                         obscureText: !this._showPassword,
                         decoration: InputDecoration(
                           filled: true,
@@ -164,7 +169,11 @@ class _SignUpPageState extends State<SignUpPage> {
                           //       height: 20,
                           //       width: 20,
                           //     )),
-
+                          hintText: "Password",
+                          hintStyle: GoogleFonts.roboto(
+                              color: HexColor("6C6A81"),
+                              decoration: TextDecoration.none,
+                              fontWeight: FontWeight.normal),
                           prefixIcon:
                           Image(image: AssetImage('assets/images/lockkk.png')),
                           // prefixIcon: Icon(Icons.lock_outline_rounded),
@@ -193,6 +202,9 @@ class _SignUpPageState extends State<SignUpPage> {
                         height: 10,
                       ),
                       TextField(
+                        style: TextStyle(
+                            color: HexColor("6C6A81")
+                        ),
                         obscureText: !this._showConfirmPassword,
                         decoration: InputDecoration(
                           filled: true,
@@ -229,7 +241,11 @@ class _SignUpPageState extends State<SignUpPage> {
                           //       height: 20,
                           //       width: 20,
                           //     )),
-
+                          hintText: "Confirm Password",
+                          hintStyle: GoogleFonts.roboto(
+                              color: HexColor("6C6A81"),
+                              decoration: TextDecoration.none,
+                              fontWeight: FontWeight.normal),
                           prefixIcon:
                           Image(image: AssetImage('assets/images/lockkk.png')),
                           // prefixIcon: Icon(Icons.lock_outline_rounded),

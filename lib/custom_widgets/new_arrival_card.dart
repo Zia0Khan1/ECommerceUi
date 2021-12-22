@@ -25,17 +25,20 @@ class NewArrivalCards extends StatelessWidget {
         ),
         child: Container(
           // color: Colors.red,
-          width: width!*0.36,
+          width: width! * 0.36,
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10.0),
+                    topLeft: Radius.circular(10.0),
+                  ),
                   child: Container(
                     height: 140,
-                    width: width!*0.35,
+                    width: width! * 0.35,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         scale: 0.8,
@@ -58,11 +61,13 @@ class NewArrivalCards extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(height: 7,),
+                SizedBox(
+                  height: 7,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 5.0),
                   child: Row(
-               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         myPrice!,
@@ -81,13 +86,17 @@ class NewArrivalCards extends StatelessWidget {
                         height: 20,
                         decoration: BoxDecoration(
                           color: HexColor("263C32"),
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
                           border: Border.all(
                             color: HexColor("263C32"),
                           ),
                         ),
-                        child: Icon(Icons.add,size: 15,color: Colors.white,),)
-
+                        child: Icon(
+                          Icons.add,
+                          size: 15,
+                          color: Colors.white,
+                        ),
+                      )
                     ],
                   ),
                 ),

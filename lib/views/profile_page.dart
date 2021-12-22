@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/categories_list.dart';
 import 'package:test_emulator/custom_widgets/heading_one.dart';
 import 'package:test_emulator/views/edit_profile_page.dart';
@@ -15,6 +16,7 @@ class ProfilePage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+        backgroundColor: HexColor("E5E5E5"),
         appBar: AppBar(
           // leading: IconButton(
           //   onPressed: () {
@@ -64,6 +66,8 @@ class ProfilePage extends StatelessWidget {
                 color: Colors.white,
                 child: Column(
                   children: [
+                    SizedBox(height: 10,),
+
                     CircleAvatar(
                       backgroundColor: Colors.transparent,
                       radius: 55,
@@ -105,6 +109,7 @@ class ProfilePage extends StatelessWidget {
                   title: "My Order",
                 ),
               ),
+              SizedBox(height: 10,),
               InkWell(
                 onTap: (){
                   Navigator.push(
@@ -117,6 +122,7 @@ class ProfilePage extends StatelessWidget {
                   title: "Settings",
                 ),
               ),
+              SizedBox(height: 10,),
               CategoriesListTile(
                 title: "Logout",
               ),

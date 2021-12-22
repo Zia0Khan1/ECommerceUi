@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/like_widget.dart';
 import 'package:test_emulator/demo_screen.dart';
 import 'package:test_emulator/splash_screen.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        backgroundColor: HexColor("E5E5E5"),
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),

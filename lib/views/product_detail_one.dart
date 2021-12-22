@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/new_arrival_card.dart';
 import 'package:test_emulator/custom_widgets/popular_product_card.dart';
 import 'package:test_emulator/custom_widgets/wall_mirror_card.dart';
@@ -9,7 +10,8 @@ class ProductDetailOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      // backgroundColor: Colors.pink,
+      backgroundColor: HexColor("E5E5E5"),
       body:Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(

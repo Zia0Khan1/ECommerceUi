@@ -15,6 +15,7 @@ class MyOrderPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -98,8 +99,8 @@ class MyOrderPage extends StatelessWidget {
                         "Beautiful Decorative...",
                         style: GoogleFonts.roboto(
                           decoration: TextDecoration.none,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                           color: HexColor("263C32"),
                         ),
                       ),
@@ -108,8 +109,8 @@ class MyOrderPage extends StatelessWidget {
                         "ID: 24 inches..",
                         style: GoogleFonts.roboto(
                           decoration: TextDecoration.none,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w300,
+                          fontSize: 13,
+                          fontWeight: FontWeight.normal,
                           color: HexColor("263C32"),
                         ),
                       ),
@@ -124,8 +125,9 @@ class MyOrderPage extends StatelessWidget {
                             "16/11/2021",
                             style: GoogleFonts.roboto(
                               decoration: TextDecoration.none,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+
+                              fontWeight: FontWeight.normal,
                               color: HexColor("263C32"),
                             ),
                           ),
@@ -137,7 +139,7 @@ class MyOrderPage extends StatelessWidget {
                                   fontSize: 12,
                                   color: color,
                                   decoration: TextDecoration.none,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.normal,
                                 ),
                               ),
                               Radio(

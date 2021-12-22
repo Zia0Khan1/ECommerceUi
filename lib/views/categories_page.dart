@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/categories_list.dart';
 import 'package:test_emulator/views/wall_mirror_screen.dart';
 
@@ -8,6 +9,7 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         title: Text(
           "Categories",

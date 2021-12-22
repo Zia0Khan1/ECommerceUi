@@ -36,7 +36,10 @@ class PopulaProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10.0),
+                    topLeft: Radius.circular(10.0),
+                  ),
                   child: Container(
                     height: 140,
                     width: width!*0.35,

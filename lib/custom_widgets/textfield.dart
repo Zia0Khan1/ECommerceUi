@@ -14,7 +14,11 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: TextStyle(
+        color: HexColor("6C6A81")
+      ),
       decoration: InputDecoration(
+
           focusColor: HexColor("6C6A81"),
 
           // prefixIcon: ImageIcon(
@@ -30,11 +34,13 @@ class TextFieldWidget extends StatelessWidget {
             ),
             color: HexColor("626262"),
           ),
+
           // border: OutlineInputBorder(
           //   borderRadius: BorderRadius.circular(20.0),
           //     // color: HexColor("#F7F7F7")
           //   // borderSide: BorderSide(color: Colors.red),
           // ),
+
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
@@ -47,10 +53,11 @@ class TextFieldWidget extends StatelessWidget {
                 color: Colors.transparent.withOpacity(0.1), width: 2),
           ),
           hintStyle: GoogleFonts.roboto(
-              color: Colors.grey,
+              color: HexColor("6C6A81"),
               decoration: TextDecoration.none,
               fontWeight: FontWeight.normal),
           hintText: hintText,
+
           fillColor: HexColor("F7F7F7")),
     );
   }

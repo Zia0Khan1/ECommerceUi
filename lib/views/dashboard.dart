@@ -59,16 +59,18 @@ class _DashBoardState extends State<DashBoard> {
         index: _selectedTab.index,
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(bottom: 10),
+        padding: EdgeInsets.only(bottom: 7),
         child: DotNavigationBar(
           // backgroundColor: HexColor("F3F3F3"),
           // margin: EdgeInsets.only(left: 5, right: 5),
           enableFloatingNavBar: false,
           currentIndex: _SelectedTab.values.indexOf(_selectedTab),
           dotIndicatorColor: Colors.transparent,
-          itemPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
+          itemPadding: EdgeInsets.only(top:0.0,bottom: 0),
+          // itemPadding: EdgeInsets.symmetric(vertical: 3, horizontal: 0),
           unselectedItemColor: Colors.grey,
-          selectedItemColor: Colors.white,
+          selectedItemColor: Colors.transparent,
+
           // EdgeInsetsGeometry ?
           // marginR = const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
           // EdgeInsetsGeometry ?
@@ -79,6 +81,7 @@ class _DashBoardState extends State<DashBoard> {
 
             /// Home
             DotNavigationBarItem(
+
               icon: CircleAvatar(
                   radius: 30.0,
                   backgroundColor: _selectedTab.index == 0

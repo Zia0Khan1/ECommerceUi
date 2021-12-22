@@ -16,6 +16,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -72,7 +73,7 @@ class _SettingsPageState extends State<SettingsPage> {
           );
         },
         child: Card(
-          // elevation: 2,
+          elevation: 2,
           child: ListTile(
             contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal: 16.0),
             title: Text(

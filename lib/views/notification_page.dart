@@ -8,6 +8,8 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5"),
+
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -60,7 +62,7 @@ class NotificationPage extends StatelessWidget {
                 height: 10,
               ),
               NotificationCard(
-                title: "Order arrived",
+                title: "Payment Confirmed",
                 text: "4 hours ago",
                 color: HexColor("E2E2E2"),
                 iconColor: Colors.black,

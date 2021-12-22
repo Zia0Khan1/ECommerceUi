@@ -13,7 +13,7 @@ class CounterWidget extends StatelessWidget {
           height: 24,
           width: 24,
           decoration: BoxDecoration(
-              color: HexColor("F3F3F3"),
+              color: HexColor("E8EBEE"),
               borderRadius: new BorderRadius.circular(7)),
           child: Center(child: Icon(Icons.remove,color: Colors.black,size: 18,)),
 
@@ -36,7 +36,7 @@ class CounterWidget extends StatelessWidget {
           height: 24,
           width: 24,
           decoration: BoxDecoration(
-              color: HexColor("F3F3F3"),
+              color: HexColor("E8EBEE"),
               borderRadius: new BorderRadius.circular(5)),
           child: Icon(Icons.add,color: Colors.black,size: 18,),
         ),

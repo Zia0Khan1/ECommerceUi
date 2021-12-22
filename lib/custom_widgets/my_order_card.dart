@@ -43,8 +43,8 @@ class MyOrderCard extends StatelessWidget {
                       "Beautiful Decorative...",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                         color: HexColor("263C32"),
                       ),
                     ),
@@ -53,8 +53,8 @@ class MyOrderCard extends StatelessWidget {
                       "ID: 24 inches..",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
+                        fontSize: 13,
+                        fontWeight: FontWeight.normal,
                         color: HexColor("263C32"),
                       ),
                     ),
@@ -69,7 +69,7 @@ class MyOrderCard extends StatelessWidget {
                           "16/11/2021",
                           style: GoogleFonts.roboto(
                             decoration: TextDecoration.none,
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: FontWeight.w500,
                             color: HexColor("263C32"),
                           ),

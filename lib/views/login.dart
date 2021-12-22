@@ -56,9 +56,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Welcome back.",
                         style: GoogleFonts.roboto(
+                          fontSize: 16,
                           color: Colors.black,
                           decoration: TextDecoration.none,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                     ),
@@ -66,9 +67,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         "Please Sign in to continue",
                         style: GoogleFonts.roboto(
+                          fontSize: 16,
+
                           color: Colors.black,
                           decoration: TextDecoration.none,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                     ),
@@ -141,6 +144,10 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 10,
           ),
           TextField(
+            style: TextStyle(
+                color: HexColor("6C6A81")
+            ),
+
             obscureText: !this._showPassword,
             decoration: InputDecoration(
               filled: true,
@@ -178,6 +185,11 @@ class _LoginScreenState extends State<LoginScreen> {
               //     )),
 
               prefixIcon: Image(image: AssetImage('assets/images/lockkk.png')),
+              hintText: "Password",
+              hintStyle: GoogleFonts.roboto(
+                  color: HexColor("6C6A81"),
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.normal),
               // prefixIcon: Icon(Icons.lock_outline_rounded),
               suffixIcon: IconButton(
                 icon: Icon(
