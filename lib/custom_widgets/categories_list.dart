@@ -9,17 +9,17 @@ class CategoriesListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left:8.0,right:8.0),
-      child: Card(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Card(
 
-        elevation: 3,
-        shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.white, ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(25),
+          elevation: 3,
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.white, ),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: ListTile(
+            shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10)),
             contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal:
             16.0),
             title: Text(

@@ -20,7 +20,7 @@ class NotificationCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
-      // elevation: 2,
+      elevation: 2,
       shape: RoundedRectangleBorder(
         side: BorderSide(color: Colors.white, ),
         borderRadius: BorderRadius.circular(10),
@@ -48,14 +48,16 @@ class NotificationCard extends StatelessWidget {
                   width: 45,
                   decoration: BoxDecoration(
                       color: color==null?HexColor("263C32"):color,
+                      // color: color==null?Colors.red:color,
                       border: Border.all(
                         color: Colors.transparent,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(50))),
 //simplelock.png
                   child: image==null ? ImageIcon(
+                    AssetImage("assets/images/simplelock.png",
 
-                    AssetImage("assets/images/simplelock.png",),
+                    ),
                     size: 40,
                     color: iconColor==null ?Colors.white: Colors.black,
 
