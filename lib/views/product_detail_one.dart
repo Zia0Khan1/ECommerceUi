@@ -11,13 +11,14 @@ class ProductDetailOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.pink,
-      backgroundColor: HexColor("E5E5E5"),
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
       body:Padding(
         padding: const EdgeInsets.all(10.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 20,),
+              SizedBox(height: 15,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 

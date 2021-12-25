@@ -17,10 +17,10 @@ class OrderDetailCard extends StatelessWidget {
         .size
         .width;
     return Card(
-      elevation: 3,
+      elevation: 0,
       child: Container(
 
-        height: height! * 0.15,
+        height: height! * 0.14,
         // color: Colors.lightGreen,
         child: Row(
           children: [
@@ -32,7 +32,7 @@ class OrderDetailCard extends StatelessWidget {
                 image: DecorationImage(
                   scale: 0.8,
                   image: AssetImage("assets/images/wallmirror.png"),
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -49,20 +49,33 @@ class OrderDetailCard extends StatelessWidget {
                       "Beautiful Decorative...",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: HexColor("263C32"),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        // color: HexColor("263C32"),
                       ),
                     ),
-                    SizedBox(height: 5),
-                    Text(
-                      "Size: 24 inches..",
-                      style: GoogleFonts.roboto(
-                        decoration: TextDecoration.none,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w300,
-                        color: HexColor("263C32"),
-                      ),
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Text(
+                          "Size: ",
+                          style: GoogleFonts.roboto(
+                              decoration: TextDecoration.none,
+                              fontSize: 13,
+                              fontWeight: FontWeight.normal,
+                            color: HexColor("979797"),),
+                        ),
+
+                        Text(
+                          "24 inche...",
+                          style: GoogleFonts.roboto(
+                            decoration: TextDecoration.none,
+                            fontSize: 13,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 10,
@@ -73,7 +86,7 @@ class OrderDetailCard extends StatelessWidget {
                         decoration: TextDecoration.none,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        color: HexColor("263C32"),
+                        color: HexColor("040C22"),
                       ),
                     ),
 

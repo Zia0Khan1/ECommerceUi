@@ -58,8 +58,8 @@ class ProductDetailsPage extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     color: Colors.black,
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
@@ -67,8 +67,8 @@ class ProductDetailsPage extends StatelessWidget {
                   style: GoogleFonts.roboto(
                     color: Colors.black,
                     decoration: TextDecoration.none,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
@@ -79,7 +79,7 @@ class ProductDetailsPage extends StatelessWidget {
                   height: 10,
                 ),
                 H1(
-                  h1: "568.6",
+                  h1: "\$4599.6",
                 ),
                 SizedBox(
                   height: 10,
@@ -195,7 +195,7 @@ class ProductDetailsPage extends StatelessWidget {
             color: Colors.amber,
           ),
           itemCount: 5,
-          itemSize: 25.0,
+          itemSize: 23.0,
           direction: Axis.horizontal,
         ),
         Text(
@@ -203,7 +203,7 @@ class ProductDetailsPage extends StatelessWidget {
           style: GoogleFonts.roboto(
             color: Colors.black,
             decoration: TextDecoration.none,
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -238,15 +238,17 @@ class ProductDetailsPage extends StatelessWidget {
         children: [
         ProductDetailsCard(
         myText: "Wall Mirror..",
-        myPrice: "4589.6",
+        myPrice: "\$4589.6",
       ),
+          SizedBox(width: 7,),
           ProductDetailsCard(
             myText: "Wall Mirror..",
-            myPrice: "4589.6",
+            myPrice: "\$4589.6",
           ),
+          SizedBox(width: 7,),
           ProductDetailsCard(
             myText: "Wall Mirror..",
-            myPrice: "4589.6",
+            myPrice: "\$4589.6",
           ),
         ],
       ),

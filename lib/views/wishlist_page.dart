@@ -13,6 +13,8 @@ class WishListPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
       appBar: AppBar(
         title: Text(
           "Wishlist",
@@ -52,7 +54,7 @@ class WishListPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 _cardRow(),
                 SizedBox(
@@ -84,7 +86,7 @@ class WishListPage extends StatelessWidget {
           myText: "Mirror Wall Decor",
           myPrice: "\$2599.0",
         ),
-        SizedBox(width: 15,),
+        SizedBox(width: 10,),
         WishListCard(
           myText: "Mirror Wall Decor",
           myPrice: "\$2599.0",

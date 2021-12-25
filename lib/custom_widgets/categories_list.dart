@@ -13,13 +13,13 @@ class CategoriesListTile extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         child: Card(
 
-          elevation: 3,
+          elevation: 0,
           shape: RoundedRectangleBorder(
             side: BorderSide(color: Colors.white, ),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(5),
           ),
           child: ListTile(
-            shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(10)),
+            shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(5)),
             contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal:
             16.0),
             title: Text(

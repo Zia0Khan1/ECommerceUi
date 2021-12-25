@@ -4,6 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:test_emulator/custom_widgets/categories_list.dart';
 import 'package:test_emulator/custom_widgets/heading_one.dart';
 import 'package:test_emulator/views/edit_profile_page.dart';
+import 'package:test_emulator/views/login.dart';
 import 'package:test_emulator/views/my_order_page.dart';
 import 'package:test_emulator/views/settings_page.dart';
 
@@ -16,7 +17,8 @@ class ProfilePage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: HexColor("E5E5E5"),
+        backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
         appBar: AppBar(
           // leading: IconButton(
           //   onPressed: () {
@@ -89,7 +91,7 @@ class ProfilePage extends StatelessWidget {
                       color:Colors.grey,
                       fontSize: 16,
                       decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.normal,
                     ),),
 
                     SizedBox(height: 20,),
@@ -123,8 +125,19 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10,),
-              CategoriesListTile(
-                title: "Logout",
+              InkWell(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            LoginScreen()),
+                  );
+                },
+
+                child: CategoriesListTile(
+                  title: "Logout",
+                ),
               ),
             ],
           ),

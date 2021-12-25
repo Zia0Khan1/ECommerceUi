@@ -14,45 +14,47 @@ class MyOrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: HexColor("E5E5E5"),
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.chevron_left),
+    return Material(
+      child: Scaffold(
+        backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.chevron_left),
+          ),
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Text(
+            "My Orders",
+            style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
+          ),
+          backgroundColor: Colors.white,
+          centerTitle: true,
+          elevation: 0.0,
         ),
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
-          "My Orders",
-          style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
-        ),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        elevation: 0.0,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            InkWell(
+        body: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Column(
+            children: [
+              SizedBox(height: 20,),
+              InkWell(
 
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => OrderDetailsPage()),
-                  );
-                },
-                child: MyOrderCard()),
-            SizedBox(height: 10,),
-            _card("Cancelled", Colors.red,context),
-            SizedBox(height: 10,),
-            _card("Pending", HexColor("999999"),context),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OrderDetailsPage()),
+                    );
+                  },
+                  child: MyOrderCard()),
+              SizedBox(height: 10,),
+              _card("Cancelled", Colors.red,context),
+              SizedBox(height: 10,),
+              _card("Pending", HexColor("999999"),context),
 
-          ],
+            ],
 
+          ),
         ),
       ),
     );

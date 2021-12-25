@@ -11,7 +11,8 @@ class ProductDetailTwo extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: HexColor("E5E5E5"),
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
 
       // appBar: AppBar(
       //   leading: IconButton(
@@ -51,7 +52,7 @@ class ProductDetailTwo extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 GridCard(),
                 SizedBox(

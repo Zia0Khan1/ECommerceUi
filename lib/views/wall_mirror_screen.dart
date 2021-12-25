@@ -15,6 +15,7 @@ class _WallMirrorScreenState extends State<WallMirrorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {

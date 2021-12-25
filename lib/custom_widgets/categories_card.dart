@@ -13,14 +13,17 @@ class CategoriesCard extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        Container(
-          height: 110,
-          width: 110,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              scale: 0.8,
-              image: AssetImage("assets/images/wallmirror.png"),
-              fit: BoxFit.cover,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(5.0),
+          child: Container(
+            height: 90,
+            width: 90,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                scale: 0.8,
+                image: AssetImage("assets/images/wallmirror.png"),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
@@ -29,8 +32,8 @@ class CategoriesCard extends StatelessWidget {
           style: GoogleFonts.roboto(
             color: Colors.black,
             decoration: TextDecoration.none,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
+            fontSize: 12,
+            fontWeight: FontWeight.normal,
           ),
         ),
       ],

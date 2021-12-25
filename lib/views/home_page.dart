@@ -16,7 +16,8 @@ class HomePage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: HexColor("E5E5E5"),
+      // backgroundColor: Colors.black.withOpacity(0.1),
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
       appBar: AppBar(
         title: Text(
           "Home",
@@ -62,7 +63,7 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                           width: 1,
-                          color: Colors.white,
+                          color: Colors.transparent,
                           style: BorderStyle.solid)),
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -173,25 +174,25 @@ class HomePage extends StatelessWidget {
             myText: "Wall Mirror",
           ),
           SizedBox(
-            width: 15,
+            width: 10,
           ),
           CategoriesCard(
             myText: "Table Lamp",
           ),
           SizedBox(
-            width: 15,
+            width: 10,
           ),
           CategoriesCard(
             myText: "Name Sign",
           ),
           SizedBox(
-            width: 15,
+            width: 10,
           ),
           CategoriesCard(
             myText: "Wooden Wall",
           ),
           SizedBox(
-            width: 15,
+            width: 10,
           ),
           CategoriesCard(
             myText: "Wall Mirror",

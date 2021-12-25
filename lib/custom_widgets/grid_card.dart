@@ -16,9 +16,9 @@ class GridCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
-      elevation: 2,
+      elevation: 0,
       child: Container(
-        padding: EdgeInsets.only(top:5.0,bottom: 5),
+        // padding: EdgeInsets.only(top:5.0,bottom: 5),
         // height: height! * 0.15,
         // color: Colors.lightGreen,
         child: Row(
@@ -26,22 +26,22 @@ class GridCard extends StatelessWidget {
             Container(
               // height: height! * 0.15,
 
-              height: 100,
+              height: 115,
               width: width! * 0.3,
               decoration: BoxDecoration(
                 // color: Colors.red,
                 image: DecorationImage(
-                  scale: 0.8,
+                  // scale: 0.8,
                   image: AssetImage("assets/images/wallmirror.png"),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 5.0),
-              child: Container(
-                width: width!*0.6,
-
+            Container(
+              width: width! * 0.6,
+              // color: Colors.red,
+              child: Padding(
+                padding: const EdgeInsets.only(left:8.0,right: 5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -53,7 +53,7 @@ class GridCard extends StatelessWidget {
                           style: GoogleFonts.roboto(
                             decoration: TextDecoration.none,
                             fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.bold,
                             color: HexColor("263C32"),
                           ),
                         ),
@@ -63,60 +63,56 @@ class GridCard extends StatelessWidget {
                     ),
                     SizedBox(height: 5),
                     Text(
-                      "5402.99",
+                      "\$5402.99",
                       style: GoogleFonts.roboto(
                         decoration: TextDecoration.none,
                         fontSize: 16,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.normal,
                         color: HexColor("263C32"),
                       ),
                     ),
                     SizedBox(
                       height: 10,
                     ),
-             Container(
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 5.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              child: MaterialButton(
+                                  padding: EdgeInsets.only(top: 3, bottom: 3),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: new BorderRadius.circular(5)),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ProductDetailsPage()),
+                                    );
+                                  },
+                                  child: Text(
+                                    "Buy Now",
+                                    style: GoogleFonts.roboto(
+                                      decoration: TextDecoration.none,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.normal,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  color: HexColor("263C32")),
+                              height: 25,
+                              width: 70
+                              ,
 
-                 child: Padding(
-                   padding: const EdgeInsets.only(bottom: 5.0),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.end,
-                     children: [
-
-                       SizedBox(
-
-
-                         child: MaterialButton(
-                             padding: EdgeInsets.only(top:3,bottom: 3),
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: new BorderRadius.circular(5)),
-                             onPressed: () {
-
-                               Navigator.push(
-                                 context,
-                                 MaterialPageRoute(builder: (context) => ProductDetailsPage()),
-                               );
-
-
-                             },
-                             child: Text(
-                               "Buy Now",
-                               style: GoogleFonts.roboto(
-                                 decoration: TextDecoration.none,
-                                 fontSize: 10,
-                                 fontWeight: FontWeight.w400,
-                                 color: Colors.white,
-                               ),
-                             ),
-                             color: HexColor("263C32")),
-                         height: 23,
-                         width: 68,
-
-                         // width: 50,
-                       ),
-                     ],
-                   ),
-                 ),
-             ),
+                              // width: 50,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                     // Align(
                     //   alignment: Alignment.bottomRight,
 

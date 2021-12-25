@@ -13,6 +13,8 @@ class OrderSuccessPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
       body: Container(
         height: height,
         width: width,

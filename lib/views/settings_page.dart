@@ -15,49 +15,51 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: HexColor("E5E5E5"),
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.chevron_left),
+    return Material(
+      child: Scaffold(
+        backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.chevron_left),
+          ),
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Text(
+            "Settings",
+            style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
+          ),
+          backgroundColor: Colors.white,
+          centerTitle: true,
+          elevation: 0.0,
         ),
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
-          "Settings",
-          style: TextStyle(fontWeight: FontWeight.w800, color: Colors.black),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            CategoriesListTile(
+              title: "Change Password",
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            CategoriesListTile(
+              title: "Change Location",
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            CategoriesListTile(
+              title: "Change Language",
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            _row("Notifications"),
+          ],
         ),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        elevation: 0.0,
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 20,
-          ),
-          CategoriesListTile(
-            title: "Change Password",
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          CategoriesListTile(
-            title: "Change Location",
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          CategoriesListTile(
-            title: "Change Language",
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          _row("Notifications"),
-        ],
       ),
     );
   }
@@ -72,45 +74,54 @@ class _SettingsPageState extends State<SettingsPage> {
             MaterialPageRoute(builder: (context) => NotificationPage()),
           );
         },
-        child: Card(
-          elevation: 2,
-          child: ListTile(
-            contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal: 16.0),
-            title: Text(
-              title,
-              style: GoogleFonts.roboto(
-                fontSize: 16,
-                color: Colors.black,
-                decoration: TextDecoration.none,
-                fontWeight: FontWeight.w400,
-              ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Card(
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: Colors.white, ),
+              borderRadius: BorderRadius.circular(5),
             ),
-            tileColor: Colors.white,
+            child: ListTile(
+              shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(5)),
 
-            trailing: Container(
-              height: 50,
-              width: 70,
-              // color: Colors.red,
-              child: FlutterSwitch(
-                height: 30,
-                width: 50,
-                activeTextColor: Colors.transparent,
-                inactiveTextColor: Colors.transparent,
-                toggleColor: Colors.white,
-                activeColor: HexColor("263C32"),
-                value: status,
-                onToggle: (val) {
-                  setState(() {
-                    print("${"status"}");
-                    status = val;
-                  });
-                },
-                toggleSize: 25,
-                showOnOff: true,
+              contentPadding: EdgeInsets.symmetric(vertical: 7.0, horizontal: 16.0),
+              title: Text(
+                title,
+                style: GoogleFonts.roboto(
+                  fontSize: 16,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
+              tileColor: Colors.white,
+
+              trailing: Container(
+                height: 50,
+                width: 70,
+                // color: Colors.red,
+                child: FlutterSwitch(
+                  height: 30,
+                  width: 50,
+                  activeTextColor: Colors.transparent,
+                  inactiveTextColor: Colors.transparent,
+                  toggleColor: Colors.white,
+                  activeColor: HexColor("263C32"),
+                  value: status,
+                  onToggle: (val) {
+                    setState(() {
+                      print("${"status"}");
+                      status = val;
+                    });
+                  },
+                  toggleSize: 25,
+                  showOnOff: true,
+                ),
+              ),
+
+
             ),
-
-
           ),
         ),
       ),

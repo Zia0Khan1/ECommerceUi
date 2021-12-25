@@ -29,18 +29,10 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Spacer(),
           Container(
-            child: Image.asset("assets/images/Vector.png"),
+            child: Image.asset("assets/images/group.png"),
           ),
 
-          Text(
-            'Mercury',
-            style: GoogleFonts.roboto(
-              color: Colors.white,
-              decoration: TextDecoration.none,
-              fontSize: 26,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+
           Spacer(),
         ],
       ),

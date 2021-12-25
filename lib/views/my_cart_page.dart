@@ -16,6 +16,8 @@ class MyCartPage extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
+
       appBar: AppBar(
         title: Text(
           "My Cart",
@@ -44,7 +46,7 @@ class MyCartPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 CartCard(),
                 SizedBox(
@@ -60,9 +62,9 @@ class MyCartPage extends StatelessWidget {
                     "You may also like",
                     style: GoogleFonts.roboto(
                       decoration: TextDecoration.none,
-                      fontSize: 20,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: HexColor("263C32"),
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -74,34 +76,40 @@ class MyCartPage extends StatelessWidget {
                   height: 20,
                 ),
                 Center(
-                  child: Card(
-                    child: Container(
-                      height: height! * 0.15,
-                      width: width! * 0.95,
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            "\$6699.0",
-                            style: GoogleFonts.roboto(
-                              decoration: TextDecoration.none,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              color: HexColor("263C32"),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+
+                    child: Card(
+                      elevation: 0,
+                      child: Container(
+                        height: height! * 0.15,
+                        width: width! * 0.95,
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 30,
                             ),
-                          ),
-                          Text(
-                            "Total Amount",
-                            style: GoogleFonts.roboto(
-                              decoration: TextDecoration.none,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: HexColor("263C32"),
+                            Text(
+                              "\$6699.0",
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                color: HexColor("263C32"),
+                              ),
                             ),
-                          ),
-                        ],
+                            SizedBox(height: 5,),
+                            Text(
+                              "Total Amount",
+                              style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -159,7 +167,8 @@ class MyCartPage extends StatelessWidget {
       child: Row(
         children: [
           MyCartCard(),
-          MyCartCard(),
+          SizedBox(width: 10,),
+          MyCartCard(),SizedBox(width: 10,),
           MyCartCard(),
         ],
       ),

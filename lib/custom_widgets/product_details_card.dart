@@ -20,50 +20,61 @@ class ProductDetailsCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(10.0),
       child: Container(
         color: HexColor("F7F7F7"),
-        width: 140,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 140,
-              width: 140,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  scale: 0.8,
-                  image: AssetImage("assets/images/wallmirror.png"),
-                  fit: BoxFit.cover,
+        width: 120,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 7.0,right: 7,top: 5,bottom: 5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Center(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10.0),
+                    topLeft: Radius.circular(10.0),
+                  ),
+                  child: Container(
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        scale: 0.8,
+                        image: AssetImage("assets/images/wallflower.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    // child: Align(
+                    //   alignment: Alignment.topRight,
+                    //   child: LikeWidget(),
+                    // ),
+                  ),
                 ),
               ),
-              child: Align(
-                alignment: Alignment.topRight,
-                child: LikeWidget(),
+              SizedBox(
+                height: 10,
               ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              myText!,
-              style: GoogleFonts.roboto(
-                color: Colors.black,
-                decoration: TextDecoration.none,
-                fontSize: 14,
-                fontWeight: FontWeight.w900,
+              Text(
+                myText!,
+                style: GoogleFonts.roboto(
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              myPrice!,
-              style: GoogleFonts.roboto(
-                color: Colors.black,
-                decoration: TextDecoration.none,
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
+              SizedBox(
+                height: 5,
               ),
-            ),
-          ],
+              Text(
+                myPrice!,
+                style: GoogleFonts.roboto(
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                  fontSize: 12,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

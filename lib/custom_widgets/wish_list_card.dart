@@ -19,6 +19,7 @@ class WishListCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(15.0),
       child: Card(
+        elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
@@ -34,7 +35,7 @@ class WishListCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
                     height: 140,
-                    width: width!*0.4,
+                    width: width!*0.41,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         scale: 0.8,
@@ -48,13 +49,14 @@ class WishListCard extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 5,),
                 Text(
                   myText!,
                   style: GoogleFonts.roboto(
                     color: Colors.black,
                     decoration: TextDecoration.none,
                     fontSize: 14,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.normal,
                   ),
                 ),
                 SizedBox(height: 5,),
@@ -69,7 +71,7 @@ class WishListCard extends StatelessWidget {
                           color: Colors.black,
                           decoration: TextDecoration.none,
                           fontSize: 14,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.normal,
                         ),
                       ),
                       // SizedBox(
