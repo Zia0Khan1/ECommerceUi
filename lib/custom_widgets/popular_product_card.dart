@@ -17,14 +17,15 @@ class PopulaProductCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return ClipRRect(
-      borderRadius: BorderRadius.circular(15.0),
+      borderRadius: BorderRadius.circular(20.0),
       child: Container(
 
   color: Colors.white,
 
         width: width!*0.36,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 7.0,right: 7.0,left: 7.0),
+          padding: const EdgeInsets.only(bottom: 7.0,right: 7.0,
+              left: 7.0,top:6 ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -46,7 +47,7 @@ class PopulaProductCard extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 6),
+                      padding: const EdgeInsets.only(top: 6,right: 2),
                       child: LikeWidget(),
                     ),
                   ),

@@ -16,6 +16,7 @@ class MyOrderPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Material(
       child: Scaffold(
+        // backgroundColor: Colors.red,
         backgroundColor: HexColor("E5E5E5").withOpacity(0.2),
         appBar: AppBar(
           leading: IconButton(
@@ -69,7 +70,7 @@ class MyOrderPage extends StatelessWidget {
         );
       },
       child: Card(
-        elevation: 2,
+        elevation: 0,
         child: Container(
 // color: Colors.red,
 //         height: height! * 0.15,

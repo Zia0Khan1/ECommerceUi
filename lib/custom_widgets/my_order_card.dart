@@ -13,7 +13,7 @@ class MyOrderCard extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return Card(
-      elevation: 2,
+      elevation: 0,
       child: Container(
 
         child: Row(

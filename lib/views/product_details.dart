@@ -17,10 +17,12 @@ class ProductDetailsPage extends StatelessWidget {
     width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: PreferredSize(
+
         preferredSize: Size.fromHeight(height! * 0.45),
         // here the desired height
 
         child: AppBar(
+          backgroundColor: Colors.transparent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),

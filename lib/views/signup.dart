@@ -30,275 +30,280 @@ class _SignUpPageState extends State<SignUpPage> {
         // appBar: AppBar(
         //   title: Text("Signup"),
         // ),
-        body: Container(
-          // height: height,
-          color: Colors.white,
-          child: Padding(
-            padding:
-                const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 5),
-            child:SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: height! * 0.1,
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()),
-                              );
-                            },
-                            child: Icon(Icons.chevron_left)),
-                      ),
-                      Center(
-                        child: H1(
-                          h1: "Sign Up",
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+flex: 95,
+              child: Container(
+                // height: height,
+                color: Colors.white,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 5),
+                  child:SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: height! * 0.1,
+                          child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LoginScreen()),
+                                );
+                              },
+                              child: Icon(Icons.chevron_left)),
                         ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Center(
-                        child: Text(
-                          "Welcome! Please Sign Up using your",
+                        Center(
+                          child: H1(
+                            h1: "Sign Up",
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Center(
+                          child: Text(
+                            "Welcome! Please Sign Up using your",
+                            style: GoogleFonts.roboto(
+                              fontSize: 16,
+                              color: Colors.black,
+                              decoration: TextDecoration.none,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Text(
+                            "personal details to continue",
+                            style: GoogleFonts.roboto(
+                              fontSize: 16,
+                              color: Colors.black,
+                              decoration: TextDecoration.none,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        H2(
+                          h2: "User Name",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFieldWidget(
+                          hintText: "John Deo",
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        H2(
+                          h2: "Email Address",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextFieldWidget(
+                          hintText: "Johndeo@gmail.com",
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        H2(
+                          h2: "Phone Number",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        CountryCodePickerWidget(),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        H2(
+                          h2: "Password",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextField(
+                          style: TextStyle(
+                              color: HexColor("6C6A81")
+                          ),
+                          obscureText: !this._showPassword,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: HexColor("#F7F7F7"),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent.withOpacity(0.1),
+                                  width: 2),
+                            ),
+                            // fillColor: Colors.red,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent.withOpacity(0.1),
+                                  width: 2),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+
+                              // borderSide: BorderSide(color: HexColor("#F7F7F7")),
+                            ),
+                            // prefixIcon: Container(
+                            //     margin: EdgeInsets.only(right: 5.0),
+                            //     decoration: BoxDecoration(
+                            //       // color: Theme.of(context).buttonColor,
+                            //       borderRadius: BorderRadius.only(
+                            //           topLeft: Radius.circular(8.0),
+                            //           bottomLeft: Radius.circular(8.0)),
+                            //     ),
+                            //     padding: EdgeInsets.all(8.0),
+                            //     child: Image.asset(
+                            //       'assets/images/lock.png',
+                            //       height: 20,
+                            //       width: 20,
+                            //     )),
+                            hintText: "Password",
+                            hintStyle: GoogleFonts.roboto(
+                                color: HexColor("6C6A81"),
+                                decoration: TextDecoration.none,
+                                fontWeight: FontWeight.normal),
+                            prefixIcon:
+                            Image(image: AssetImage('assets/images/lockkk.png')),
+                            // prefixIcon: Icon(Icons.lock_outline_rounded),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                this._showPassword
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                color:
+                                this._showPassword ? Colors.black : Colors.black,
+                              ),
+                              onPressed: () {
+                                setState(
+                                        () => this._showPassword = !this._showPassword);
+                              },
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        H2(
+                          h2: "Confirm Password",
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TextField(
+                          style: TextStyle(
+                              color: HexColor("6C6A81")
+                          ),
+                          obscureText: !this._showConfirmPassword,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: HexColor("#F7F7F7"),
+                            // fillColor: Colors.red,
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent.withOpacity(0.1),
+                                  width: 2),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                              borderSide: BorderSide(
+                                  color: Colors.transparent.withOpacity(0.1),
+                                  width: 2),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+
+                              // borderSide: BorderSide(color: HexColor("#F7F7F7")),
+                            ),
+                            // prefixIcon: Container(
+                            //     margin: EdgeInsets.only(right: 5.0),
+                            //     decoration: BoxDecoration(
+                            //       // color: Theme.of(context).buttonColor,
+                            //       borderRadius: BorderRadius.only(
+                            //           topLeft: Radius.circular(8.0),
+                            //           bottomLeft: Radius.circular(8.0)),
+                            //     ),
+                            //     padding: EdgeInsets.all(8.0),
+                            //     child: Image.asset(
+                            //       'assets/images/lock.png',
+                            //       height: 20,
+                            //       width: 20,
+                            //     )),
+                            hintText: "Confirm Password",
+                            hintStyle: GoogleFonts.roboto(
+                                color: HexColor("6C6A81"),
+                                decoration: TextDecoration.none,
+                                fontWeight: FontWeight.normal),
+                            prefixIcon:
+                            Image(image: AssetImage('assets/images/lockkk.png')),
+                            // prefixIcon: Icon(Icons.lock_outline_rounded),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                this._showConfirmPassword
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                color:
+                                this._showConfirmPassword ? Colors.black : Colors.black,
+                              ),
+                              onPressed: () {
+                                setState(
+                                        () => this._showConfirmPassword = !this._showConfirmPassword);
+                              },
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "By creating an account or logging in you agree to\n"
+                              "our Terms & Conditions and Privacy policy",
                           style: GoogleFonts.roboto(
                             fontSize: 16,
-                            color: Colors.black,
+                            color: Colors.grey,
                             decoration: TextDecoration.none,
-                            fontWeight: FontWeight.normal,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
-                      ),
-                      Center(
-                        child: Text(
-                          "personal details to continue",
-                          style: GoogleFonts.roboto(
-                            fontSize: 16,
-                            color: Colors.black,
-                            decoration: TextDecoration.none,
-                            fontWeight: FontWeight.normal,
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Center(
+                          child: RoundButton(
+                            btnText: "Sign Up",
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      H2(
-                        h2: "User Name",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextFieldWidget(
-                        hintText: "John Deo",
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      H2(
-                        h2: "Email Address",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextFieldWidget(
-                        hintText: "Johndeo@gmail.com",
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      H2(
-                        h2: "Phone Number",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      CountryCodePickerWidget(),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      H2(
-                        h2: "Password",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        style: TextStyle(
-                            color: HexColor("6C6A81")
+                        SizedBox(
+                          height: 15,
                         ),
-                        obscureText: !this._showPassword,
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: HexColor("#F7F7F7"),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            borderSide: BorderSide(
-                                color: Colors.transparent.withOpacity(0.1),
-                                width: 2),
-                          ),
-                          // fillColor: Colors.red,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            borderSide: BorderSide(
-                                color: Colors.transparent.withOpacity(0.1),
-                                width: 2),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0),
 
-                            // borderSide: BorderSide(color: HexColor("#F7F7F7")),
-                          ),
-                          // prefixIcon: Container(
-                          //     margin: EdgeInsets.only(right: 5.0),
-                          //     decoration: BoxDecoration(
-                          //       // color: Theme.of(context).buttonColor,
-                          //       borderRadius: BorderRadius.only(
-                          //           topLeft: Radius.circular(8.0),
-                          //           bottomLeft: Radius.circular(8.0)),
-                          //     ),
-                          //     padding: EdgeInsets.all(8.0),
-                          //     child: Image.asset(
-                          //       'assets/images/lock.png',
-                          //       height: 20,
-                          //       width: 20,
-                          //     )),
-                          hintText: "Password",
-                          hintStyle: GoogleFonts.roboto(
-                              color: HexColor("6C6A81"),
-                              decoration: TextDecoration.none,
-                              fontWeight: FontWeight.normal),
-                          prefixIcon:
-                          Image(image: AssetImage('assets/images/lockkk.png')),
-                          // prefixIcon: Icon(Icons.lock_outline_rounded),
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              this._showPassword
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
-                              color:
-                              this._showPassword ? Colors.black : Colors.black,
-                            ),
-                            onPressed: () {
-                              setState(
-                                      () => this._showPassword = !this._showPassword);
-                            },
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      H2(
-                        h2: "Confirm Password",
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        style: TextStyle(
-                            color: HexColor("6C6A81")
-                        ),
-                        obscureText: !this._showConfirmPassword,
-                        decoration: InputDecoration(
-                          filled: true,
-                          fillColor: HexColor("#F7F7F7"),
-                          // fillColor: Colors.red,
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            borderSide: BorderSide(
-                                color: Colors.transparent.withOpacity(0.1),
-                                width: 2),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                            borderSide: BorderSide(
-                                color: Colors.transparent.withOpacity(0.1),
-                                width: 2),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-
-                            // borderSide: BorderSide(color: HexColor("#F7F7F7")),
-                          ),
-                          // prefixIcon: Container(
-                          //     margin: EdgeInsets.only(right: 5.0),
-                          //     decoration: BoxDecoration(
-                          //       // color: Theme.of(context).buttonColor,
-                          //       borderRadius: BorderRadius.only(
-                          //           topLeft: Radius.circular(8.0),
-                          //           bottomLeft: Radius.circular(8.0)),
-                          //     ),
-                          //     padding: EdgeInsets.all(8.0),
-                          //     child: Image.asset(
-                          //       'assets/images/lock.png',
-                          //       height: 20,
-                          //       width: 20,
-                          //     )),
-                          hintText: "Confirm Password",
-                          hintStyle: GoogleFonts.roboto(
-                              color: HexColor("6C6A81"),
-                              decoration: TextDecoration.none,
-                              fontWeight: FontWeight.normal),
-                          prefixIcon:
-                          Image(image: AssetImage('assets/images/lockkk.png')),
-                          // prefixIcon: Icon(Icons.lock_outline_rounded),
-                          suffixIcon: IconButton(
-                            icon: Icon(
-                              this._showConfirmPassword
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
-                              color:
-                              this._showConfirmPassword ? Colors.black : Colors.black,
-                            ),
-                            onPressed: () {
-                              setState(
-                                      () => this._showConfirmPassword = !this._showConfirmPassword);
-                            },
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "By creating an account or logging in you agree to\n"
-                            "our Terms & Conditions and Privacy policy",
-                        style: GoogleFonts.roboto(
-                          fontSize: 16,
-                          color: Colors.grey,
-                          decoration: TextDecoration.none,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Center(
-                        child: RoundButton(
-                          btnText: "Sign Up",
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-
-                    ],
+                      ],
+                    ),
                   ),
-                  Container(
-
-                    child: _textRow(context),
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                // color: Colors.red,
+                child: _textRow(context),
+              ),
+            ),
+          ],
         ),
       ),
     );
