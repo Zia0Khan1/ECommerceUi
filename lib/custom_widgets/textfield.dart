@@ -18,29 +18,13 @@ class TextFieldWidget extends StatelessWidget {
         color: HexColor("6C6A81")
       ),
       decoration: InputDecoration(
-
           focusColor: HexColor("6C6A81"),
-
-          // prefixIcon: ImageIcon(
-          //   //  AssetImage(
-          //   //
-          //   //   "assets/images/mail.png",
-          //   // ),
-          // ),
           prefixIcon: ImageIcon(
             new AssetImage(
-
               "assets/images/Mail.png",
             ),
             color: HexColor("626262"),
           ),
-
-          // border: OutlineInputBorder(
-          //   borderRadius: BorderRadius.circular(20.0),
-          //     // color: HexColor("#F7F7F7")
-          //   // borderSide: BorderSide(color: Colors.red),
-          // ),
-
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
